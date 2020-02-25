@@ -1,0 +1,52 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.Arrays;
+
+import static org.junit.Assert.assertTrue;
+
+
+public class TestReader {
+
+    @Test
+    void NonExistantFileCase() {
+        String NonExistantURL= "NonExistantURL";
+        Assertions.assertThrows(FileNotFoundException.class, () -> {
+            ReadJSONClass.ReadJSON(NonExistantURL);
+        });
+    }
+
+/*    @Test
+    void FolderNotFileCase() {
+        String folderNotFileURL = "../../../critic/test/samples/EmptyRepository";
+        Assertions.assertThrows(FileNotFoundException.class, () -> {
+            ReadJSONClass.ReadJSON(folderNotFileURL);
+        });
+    }
+
+    @Test
+    void emptyJSONFileCase() throws IOException {
+        String emptyJSONFileURL = "../../../critic/test/samples/emptyJSONFile.JSON";
+        ReadJSONClass.ReadJSON(emptyJSONFileURL);
+            String emptyHTMLFileURL = "../../../critic/test/samples/criticHTML.html";
+            String emptyExpectedHTMLFileURL = "../../../critic/test/samples/expectedEmptyHTMLFile.html";
+        assertTrue(FilesContentsAreEquals(emptyExpectedHTMLFileURL, emptyHTMLFileURL));
+    }
+
+    private boolean FilesContentsAreEquals(String path1, String path2) {
+        File f1 = new File(path1);
+        File f2 = new File(path2);
+        try {
+            byte[] content1 = Files.readAllBytes(f1.toPath());
+            byte[] content2 = Files.readAllBytes(f2.toPath());
+            return Arrays.equals(content1, content2);
+        } catch (Exception e)
+        {
+            return false;
+        }
+    }*/
+}

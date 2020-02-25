@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cd20e68-fd36-4723-b06d-38b701dce8b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/criticDisplay.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Y79kPiJfdQHPtZfLQY6T8NEr29" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../critic" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ccile\CriticDisplay\src\main" />
+      <recent name="D:\Ccile\CriticDisplay\src" />
+      <recent name="D:\Ccile\CriticDisplay" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Ccile\CriticDisplay" />
+      <recent name="D:\Ccile\CriticDisplay\src\test" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="testReader" type="JUnit" factoryName="JUnit">
+      <module name="criticDisplay" />
+      <useClassPathOnly />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestReader" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cd20e68-fd36-4723-b06d-38b701dce8b9" name="Default Changelist" comment="" />
+      <created>1582282907111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582282907111</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="237" y="34" key="#CriticDisplayTest" timestamp="1582284369987">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="237" y="34" key="#CriticDisplayTest/0.0.1280.760@0.0.1280.760" timestamp="1582284369987" />
+    <state x="287" y="65" width="800" height="677" key="#Project_Structure" timestamp="1582623394872">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="232" y="37" key="#Project_Structure/0.0.1280.760@0.0.1280.760" timestamp="1582283075717" />
+    <state x="287" y="65" width="800" height="677" key="#Project_Structure/67.27.1213.773@67.27.1213.773" timestamp="1582623394872" />
+    <state x="237" y="46" key="#TestReader" timestamp="1582293493338">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="237" y="46" key="#TestReader/0.0.1280.760@0.0.1280.760" timestamp="1582293493338" />
+    <state x="140" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582623920912">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="137" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1582293504570" />
+    <state x="140" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1213.773@67.27.1213.773" timestamp="1582623920912" />
+    <state x="388" y="182" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582284548477">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="388" y="182" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.760@0.0.1280.760" timestamp="1582284548477" />
+    <state x="438" y="188" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582623900734">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="438" y="188" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1213.773@67.27.1213.773" timestamp="1582623900734" />
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582623580067">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="420" y="134" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582283272655" />
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582623580067" />
+    <state width="1167" height="205" key="GridCell.Tab.0.bottom" timestamp="1582629216584">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="205" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582629216584" />
+    <state width="1167" height="205" key="GridCell.Tab.0.center" timestamp="1582629216581">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="205" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582629216581" />
+    <state width="1167" height="205" key="GridCell.Tab.0.left" timestamp="1582629216574">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="205" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582629216574" />
+    <state width="1167" height="205" key="GridCell.Tab.0.right" timestamp="1582629216583">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="205" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582629216583" />
+    <state width="1167" height="232" key="GridCell.Tab.1.bottom" timestamp="1582628860124">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="232" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582628860124" />
+    <state width="1167" height="232" key="GridCell.Tab.1.center" timestamp="1582628860110">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="232" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582628860110" />
+    <state width="1167" height="232" key="GridCell.Tab.1.left" timestamp="1582628860106">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="232" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582628860106" />
+    <state width="1167" height="232" key="GridCell.Tab.1.right" timestamp="1582628860123">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state width="1167" height="232" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582628860123" />
+    <state x="181" y="27" key="SettingsEditor" timestamp="1582628095802">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="120" y="0" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582293363804" />
+    <state x="181" y="27" key="SettingsEditor/67.27.1213.773@67.27.1213.773" timestamp="1582628095802" />
+    <state x="329" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582625842455">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="329" y="240" key="com.intellij.ide.util.TipDialog/67.27.1213.773@67.27.1213.773" timestamp="1582625842455" />
+    <state x="344" y="272" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582293469648">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="344" y="272" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.760@0.0.1280.760" timestamp="1582293469648" />
+    <state x="22" y="0" key="new project wizard" timestamp="1582284021179">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="22" y="0" key="new project wizard/0.0.1280.760@0.0.1280.760" timestamp="1582284021179" />
+    <state x="337" y="58" width="672" height="676" key="search.everywhere.popup" timestamp="1582628065725">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="337" y="58" width="672" height="676" key="search.everywhere.popup/67.27.1213.773@67.27.1213.773" timestamp="1582628065725" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/ReadJSONClass.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/criticDisplay$testReader.ic" NAME="testReader Coverage Results" MODIFIED="1582623521726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
