@@ -23,54 +23,57 @@ public class TestReader {
 
     @Test
     void FolderNotFileCase() {
-        String folderNotFileURL = "../../../critic/test/samples/EmptyRepository/";
+        String folderNotFileURL = "./test/EmptyRepository/";
         Assertions.assertThrows(FileNotFoundException.class, () -> {
             ReadJSONClass.ReadJSON(folderNotFileURL);
         });
     }
 
     @Test
-    void emptyJSONFileCase() {
-        String emptyJSONFileURL = "../../../critic/test/samples/emptyJSONFile.JSON";
-        Assertions.assertThrows(FileNotFoundException.class, () -> {
-        assertEquals("<p></p>", ReadJSONClass.ReadJSON(emptyJSONFileURL));
+    void StringFromEmptyJSONFileCase() {
+        String emptyJSONFileURL = "./test/emptyJSONFile.JSON";
+        String htmlContent = "<p></p>";
+        Assertions.assertDoesNotThrow(() -> {
+        assertEquals(htmlContent, ReadJSONClass.ReadJSON(emptyJSONFileURL));
         });
     }
 
     @Test
-    void simpleJSONFileCase() {
-        String simpleJSONFileURL = "../../../critic/test/samples/RepositoryWithOneFile/critic.JSON";
-        Assertions.assertThrows(FileNotFoundException.class, () -> {
-            assertEquals("<p>{\n" +
-                    "\t\"path\" : \"test/samples/RepositoryWithOneFile\",\n" +
-                    "\t\"type\" : \"directory\",\n" +
-                    "\t\"score\" : \"1\",\n" +
-                    "\t\"content\" : [\n" +
-                    "\t\t{\n" +
-                    "\t\t\t\"path\" : \"firstFile.txt\",\n" +
-                    "\t\t\t\"type\" : \"file\",\n" +
-                    "\t\t\t\"score\" : \"1\",\n" +
-                    "\t\t\t\"content\" : [\n" +
-                    "\t\t\t\t{\n" +
-                    "\t\t\t\t}\n" +
-                    "\t\t\t]\n" +
-                    "\t\t}\n" +
-                    "\t]\n" +
-                    "}</p>", ReadJSONClass.ReadJSON(simpleJSONFileURL));
+    void StringFromJSONFileCase() {
+        String JSONFileURL = "./test/RepositoryWithOneFile//critic.json";
+        String htmlContent = "<p>{\n" +
+                "\t\"path\" : \"test/samples/RepositoryWithOneFile\",\n" +
+                "\t\"type\" : \"directory\",\n" +
+                "\t\"score\" : \"1\",\n" +
+                "\t\"content\" : [\n" +
+                "\t\t{\n" +
+                "\t\t\t\"path\" : \"firstFile.txt\",\n" +
+                "\t\t\t\"type\" : \"file\",\n" +
+                "\t\t\t\"score\" : \"1\",\n" +
+                "\t\t\t\"content\" : [\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t]\n" +
+                "\t\t}\n" +
+                "\t]\n" +
+                "}</p>";
+        Assertions.assertDoesNotThrow(() -> {
+            String contentToPrint = ReadJSONClass.ReadJSON(JSONFileURL);
+            assertEquals( htmlContent, contentToPrint);
         });
     }
 
-/*    @Test
-    void emptyJSONFileCase() {
-        String emptyJSONFileURL = "../../../critic/test/samples/emptyJSONFile.JSON";
+ /*   @Test
+    void WriteHTMLFileCase() {
+        String JSONFileURL = "../critic/test/samples/JSONFile.json";
         Assertions.assertThrows(FileNotFoundException.class, () -> {
-        ReadJSONClass.ReadJSON(emptyJSONFileURL);
+        ReadJSONClass.ReadJSON(JSONFileURL);
         });
-        String emptyHTMLFileURL = "../../../critic/test/samples/criticHTML.html";
-        String emptyExpectedHTMLFileURL = "../../../critic/test/samples/expectedEmptyHTMLFile.html";
-        //File emptyHTMLFile = new File(emptyHTMLFileURL);
-        //File emptyExpectedHTMLFile = new File(emptyExpectedHTMLFileURL);
-        assertTrue(FilesContentsAreEquals(emptyExpectedHTMLFileURL, emptyHTMLFileURL));
+        String generatedHTMLFileURL = "../critic/test/samples/criticHTML.html";
+        String expectedHTMLFileURL = "../critic/test/samples/expectedEmptyHTMLFile.html";
+        //File generatedHTMLFile = new File(generatedHTMLFileURL);
+        //File expectedHTMLFile = new File(expectedHTMLFileURL);
+        assertTrue(FilesContentsAreEquals(expectedHTMLFileURL, generatedHTMLFileURL));
     }*/
 
     private boolean FilesContentsAreEquals(String path1, String path2) {

@@ -8,8 +8,6 @@ import java.util.logging.Logger;
 
 public class ReadJSONClass {
 
-    private static String myHTML;
-
     public static String ReadJSON(String fileURL) throws IOException {
 
         File JSONToBeRead = new File(fileURL);
@@ -17,11 +15,11 @@ public class ReadJSONClass {
             throw new FileNotFoundException();
         }
 
-/*        if (JSONToBeRead.isDirectory()){
-            throw new FileNameExtensionFilter();
+        if (JSONToBeRead.isDirectory()){
+            throw new FileNotFoundException();
         }
 
-        myHTML = "<p>";
+        String myHTML = "<p>";
 
         FileReader JSONToBeReadInputStream = new FileReader(JSONToBeRead);
         Scanner JSONScanner = new Scanner(JSONToBeReadInputStream);
@@ -29,14 +27,18 @@ public class ReadJSONClass {
         while(JSONScanner.hasNextLine()) {
             String line = JSONScanner.nextLine();
                 try {
-                    myHTML+= line;
+                    myHTML+= line + "\n";
                 } catch (Exception var6) {
                     System.out.println(var6.getMessage());
                 }
             }
         JSONToBeReadInputStream.close();
 
-        File myHTMLFile = new File("../../../critic/test/samples/criticHTML.html");
+        if (myHTML.length()>3){
+            myHTML = myHTML.substring(0, myHTML.length()-1);
+        }
+
+ /*     File myHTMLFile = new File("../critic/test/samples/criticHTML.html");
         myHTMLFile.createNewFile();
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
         fileWriter.write((myHTML + "</p>").getBytes());*/

@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cd20e68-fd36-4723-b06d-38b701dce8b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/criticDisplay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ReadJSONClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -60,7 +55,27 @@
       <recent name="D:\Ccile\CriticDisplay\src\test" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.testReader">
+    <configuration name="TestReader.StringFromEmptyJSONFileCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="criticDisplay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestReader" />
+      <option name="METHOD_NAME" value="StringFromEmptyJSONFileCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestReader.StringFromJSONFileCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="criticDisplay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestReader" />
+      <option name="METHOD_NAME" value="StringFromJSONFileCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testReader" type="JUnit" factoryName="JUnit">
       <module name="criticDisplay" />
       <useClassPathOnly />
@@ -73,6 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestReader.StringFromEmptyJSONFileCase" />
+        <item itemvalue="JUnit.TestReader.StringFromJSONFileCase" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -119,38 +140,38 @@
     </state>
     <state x="420" y="134" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582283272655" />
     <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582623580067" />
-    <state width="1167" height="205" key="GridCell.Tab.0.bottom" timestamp="1582629216584">
+    <state width="1167" height="258" key="GridCell.Tab.0.bottom" timestamp="1582650607389">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="205" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582629216584" />
-    <state width="1167" height="205" key="GridCell.Tab.0.center" timestamp="1582629216581">
+    <state width="1167" height="258" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582650607389" />
+    <state width="1167" height="258" key="GridCell.Tab.0.center" timestamp="1582650607384">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="205" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582629216581" />
-    <state width="1167" height="205" key="GridCell.Tab.0.left" timestamp="1582629216574">
+    <state width="1167" height="258" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582650607384" />
+    <state width="1167" height="258" key="GridCell.Tab.0.left" timestamp="1582650607383">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="205" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582629216574" />
-    <state width="1167" height="205" key="GridCell.Tab.0.right" timestamp="1582629216583">
+    <state width="1167" height="258" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582650607383" />
+    <state width="1167" height="258" key="GridCell.Tab.0.right" timestamp="1582650607386">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="205" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582629216583" />
-    <state width="1167" height="232" key="GridCell.Tab.1.bottom" timestamp="1582628860124">
+    <state width="1167" height="258" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582650607386" />
+    <state width="1167" height="292" key="GridCell.Tab.1.bottom" timestamp="1582650552421">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="232" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582628860124" />
-    <state width="1167" height="232" key="GridCell.Tab.1.center" timestamp="1582628860110">
+    <state width="1167" height="292" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582650552421" />
+    <state width="1167" height="292" key="GridCell.Tab.1.center" timestamp="1582650552417">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="232" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582628860110" />
-    <state width="1167" height="232" key="GridCell.Tab.1.left" timestamp="1582628860106">
+    <state width="1167" height="292" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582650552417" />
+    <state width="1167" height="292" key="GridCell.Tab.1.left" timestamp="1582650552416">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="232" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582628860106" />
-    <state width="1167" height="232" key="GridCell.Tab.1.right" timestamp="1582628860123">
+    <state width="1167" height="292" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582650552416" />
+    <state width="1167" height="292" key="GridCell.Tab.1.right" timestamp="1582650552418">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="232" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582628860123" />
+    <state width="1167" height="292" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582650552418" />
     <state x="181" y="27" key="SettingsEditor" timestamp="1582628095802">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
@@ -178,8 +199,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/ReadJSONClass.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="6" />
+          <line>12</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,0 +1,16 @@
+{
+	"path" : "test/samples/RepositoryWithOneFile",
+	"type" : "directory",
+	"score" : "1",
+	"content" : [
+		{
+			"path" : "firstFile.txt",
+			"type" : "file",
+			"score" : "1",
+			"content" : [
+				{
+				}
+			]
+		}
+	]
+}
