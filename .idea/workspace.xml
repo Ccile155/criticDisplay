@@ -4,10 +4,9 @@
     <list default="true" id="6cd20e68-fd36-4723-b06d-38b701dce8b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ReadJSONClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass$EmptyDirectoryAnalysisException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass$EmptyDirectoryAnalysisException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass$NotAFileException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass$NotAFileException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/criticHTML2.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -167,22 +167,22 @@
     </state>
     <state x="420" y="134" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582283272655" />
     <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582707373848" />
-    <state width="1167" height="215" key="GridCell.Tab.0.bottom" timestamp="1582729834787">
+    <state width="1167" height="103" key="GridCell.Tab.0.bottom" timestamp="1582732157369">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="215" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582729834787" />
-    <state width="1167" height="215" key="GridCell.Tab.0.center" timestamp="1582729834785">
+    <state width="1167" height="103" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582732157369" />
+    <state width="1167" height="103" key="GridCell.Tab.0.center" timestamp="1582732157362">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="215" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582729834785" />
-    <state width="1167" height="215" key="GridCell.Tab.0.left" timestamp="1582729834776">
+    <state width="1167" height="103" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582732157362" />
+    <state width="1167" height="103" key="GridCell.Tab.0.left" timestamp="1582732157361">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="215" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582729834776" />
-    <state width="1167" height="215" key="GridCell.Tab.0.right" timestamp="1582729834786">
+    <state width="1167" height="103" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582732157361" />
+    <state width="1167" height="103" key="GridCell.Tab.0.right" timestamp="1582732157368">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="215" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582729834786" />
+    <state width="1167" height="103" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582732157368" />
     <state width="1167" height="169" key="GridCell.Tab.1.bottom" timestamp="1582724564039">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
@@ -212,6 +212,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="344" y="272" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.760@0.0.1280.760" timestamp="1582293469648" />
+    <state x="406" y="154" width="524" height="516" key="extract.method.dialog" timestamp="1582731912037">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="406" y="154" width="524" height="516" key="extract.method.dialog/67.27.1213.773@67.27.1213.773" timestamp="1582731912037" />
     <state x="22" y="0" key="new project wizard" timestamp="1582284021179">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

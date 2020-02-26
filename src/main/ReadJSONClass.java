@@ -12,6 +12,7 @@ public class ReadJSONClass {
     public static String ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException, NotAFileException {
 
         File JSONToBeRead = new File(fileURL);
+
         if (!JSONToBeRead.exists()) {
             throw new FileNotFoundException();
         }
@@ -20,7 +21,14 @@ public class ReadJSONClass {
             throw new NotAFileException("This is a folder !");
         }
 
+        String htmlContent = readJSONWriteHtmlContent(JSONToBeRead);
 
+        writeHtmlFile(htmlContent);
+
+        return htmlContent;
+    }
+
+    private static String readJSONWriteHtmlContent(File JSONToBeRead) throws ParseException, IOException, EmptyDirectoryAnalysisException {
         FileReader JSONToBeReadInputStream = new FileReader(JSONToBeRead);
         Scanner JSONScanner = new Scanner(JSONToBeReadInputStream);
 
@@ -39,6 +47,12 @@ public class ReadJSONClass {
             }
         JSONToBeReadInputStream.close();
 
+        checkEmptyDirAnalysisContent(myHTML);
+
+        return myHTML + "</p>\n";
+    }
+
+    private static void checkEmptyDirAnalysisContent(String myHTML) throws EmptyDirectoryAnalysisException {
         String emptyRepositoryAnalysisHtmlContent = "<p>{\n" +
                 "\t\"path\" : \"test/samples/EmptyRepository\",\n" +
                 "\t\"type\" : \"directory\",\n" +
@@ -50,15 +64,13 @@ public class ReadJSONClass {
         if (myHTML.equals(emptyRepositoryAnalysisHtmlContent)) {
             throw new EmptyDirectoryAnalysisException("The analyzed directory was empty.");
         }
+    }
 
-        String htmlContent = myHTML + "</p>\n";
-
+    private static void writeHtmlFile(String htmlContent) throws IOException {
         File myHTMLFile = new File("./test/criticHTML.html");
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
         fileWriter.write(htmlContent.getBytes());
         fileWriter.close();
-
-        return htmlContent;
     }
 
     public static class EmptyDirectoryAnalysisException extends Exception {
@@ -72,4 +84,5 @@ public class ReadJSONClass {
             super(errorMessage);
         }
     }
+
 }
