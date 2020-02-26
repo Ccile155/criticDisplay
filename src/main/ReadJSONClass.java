@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class ReadJSONClass {
 
-    public static String ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException {
+    public static String ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException, NotAFileException {
 
         File JSONToBeRead = new File(fileURL);
         if (!JSONToBeRead.exists()) {
@@ -17,7 +17,7 @@ public class ReadJSONClass {
         }
 
         if (JSONToBeRead.isDirectory()){
-            throw new FileNotFoundException();
+            throw new NotAFileException("This is a folder !");
         }
 
 
@@ -63,6 +63,12 @@ public class ReadJSONClass {
 
     public static class EmptyDirectoryAnalysisException extends Exception {
         public EmptyDirectoryAnalysisException(String errorMessage) {
+            super(errorMessage);
+        }
+    }
+
+    public static class NotAFileException extends Exception {
+        public NotAFileException(String errorMessage) {
             super(errorMessage);
         }
     }

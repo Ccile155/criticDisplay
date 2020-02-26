@@ -26,8 +26,8 @@ public class TestReader {
 
     @Test
     void FolderNotFileCase() {
-        String folderNotFileURL = "./test/EmptyRepository/";
-        Assertions.assertThrows(FileNotFoundException.class, () -> {
+        String folderNotFileURL = "./test/RepositoryWithOneFile";
+        Assertions.assertThrows(ReadJSONClass.NotAFileException.class, () -> {
             ReadJSONClass.ReadJSON(folderNotFileURL);
         });
     }
