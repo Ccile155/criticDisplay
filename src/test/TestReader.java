@@ -1,10 +1,13 @@
+import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.text.ParseException;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
@@ -30,17 +33,16 @@ public class TestReader {
     }
 
     @Test
-    void StringFromEmptyJSONFileCase() {
-        String emptyJSONFileURL = "./test/emptyJSONFile.JSON";
-        String htmlContent = "<p></p>";
-        Assertions.assertDoesNotThrow(() -> {
-        assertEquals(htmlContent, ReadJSONClass.ReadJSON(emptyJSONFileURL));
+    void EmptyFileCase() {
+        String emptyJSONFileURL = "./test/emptyFile.json";
+        Assertions.assertThrows(ParseException.class, () -> {
+            ReadJSONClass.ReadJSON(emptyJSONFileURL);
         });
     }
 
     @Test
     void StringFromJSONFileCase() {
-        String JSONFileURL = "./test/RepositoryWithOneFile//critic.json";
+        String JSONFileURL = "./test/RepositoryWithOneFile/critic.json";
         String htmlContent = "<p>{\n" +
                 "\t\"path\" : \"test/samples/RepositoryWithOneFile\",\n" +
                 "\t\"type\" : \"directory\",\n" +
@@ -56,25 +58,28 @@ public class TestReader {
                 "\t\t\t]\n" +
                 "\t\t}\n" +
                 "\t]\n" +
-                "}</p>";
+                "}\n" +
+                "</p>";
         Assertions.assertDoesNotThrow(() -> {
             String contentToPrint = ReadJSONClass.ReadJSON(JSONFileURL);
-            assertEquals( htmlContent, contentToPrint);
+            assertEquals(htmlContent, contentToPrint);
         });
     }
-
- /*   @Test
+    @Disabled
+    @Test
     void WriteHTMLFileCase() {
-        String JSONFileURL = "../critic/test/samples/JSONFile.json";
-        Assertions.assertThrows(FileNotFoundException.class, () -> {
-        ReadJSONClass.ReadJSON(JSONFileURL);
+        //String JSONFileURL = "../critic/test/samples/JSONFile.json";
+        String JSONFileURL = "./test/RepositoryWithOneFile/critic.json";
+        String generatedHTMLFileURL = "./test/criticHTML.html";
+        String expectedHTMLFileURL = "./test/expectedEmptyHTMLFile.html";
+
+        RemoveFile(generatedHTMLFileURL);
+
+        Assertions.assertDoesNotThrow(() -> {
+            ReadJSONClass.ReadJSON(JSONFileURL);
         });
-        String generatedHTMLFileURL = "../critic/test/samples/criticHTML.html";
-        String expectedHTMLFileURL = "../critic/test/samples/expectedEmptyHTMLFile.html";
-        //File generatedHTMLFile = new File(generatedHTMLFileURL);
-        //File expectedHTMLFile = new File(expectedHTMLFileURL);
         assertTrue(FilesContentsAreEquals(expectedHTMLFileURL, generatedHTMLFileURL));
-    }*/
+    }
 
     private boolean FilesContentsAreEquals(String path1, String path2) {
         File f1 = new File(path1);
@@ -87,6 +92,11 @@ public class TestReader {
         {
             return false;
         }
+    }
+
+    private void RemoveFile(String fileName) {
+        File f = new File(fileName);
+        f.delete();
     }
 
 }

@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ReadJSONClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/TestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/emptyJSONFile.JSON" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../critic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,6 +75,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestReader.WriteHTMLFileCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="criticDisplay" />
+      <useClassPathOnly />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestReader" />
+      <option name="METHOD_NAME" value="WriteHTMLFileCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testReader" type="JUnit" factoryName="JUnit">
       <module name="criticDisplay" />
       <useClassPathOnly />
@@ -90,8 +101,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestReader.StringFromEmptyJSONFileCase" />
         <item itemvalue="JUnit.TestReader.StringFromJSONFileCase" />
+        <item itemvalue="JUnit.TestReader.WriteHTMLFileCase" />
+        <item itemvalue="JUnit.TestReader.StringFromEmptyJSONFileCase" />
       </list>
     </recent_temporary>
   </component>
@@ -135,43 +147,43 @@
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="438" y="188" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1213.773@67.27.1213.773" timestamp="1582623900734" />
-    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582623580067">
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582707373848">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="420" y="134" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582283272655" />
-    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582623580067" />
-    <state width="1167" height="258" key="GridCell.Tab.0.bottom" timestamp="1582650607389">
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582707373848" />
+    <state width="1167" height="215" key="GridCell.Tab.0.bottom" timestamp="1582711308971">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="258" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582650607389" />
-    <state width="1167" height="258" key="GridCell.Tab.0.center" timestamp="1582650607384">
+    <state width="1167" height="215" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582711308971" />
+    <state width="1167" height="215" key="GridCell.Tab.0.center" timestamp="1582711308969">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="258" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582650607384" />
-    <state width="1167" height="258" key="GridCell.Tab.0.left" timestamp="1582650607383">
+    <state width="1167" height="215" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582711308969" />
+    <state width="1167" height="215" key="GridCell.Tab.0.left" timestamp="1582711308967">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="258" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582650607383" />
-    <state width="1167" height="258" key="GridCell.Tab.0.right" timestamp="1582650607386">
+    <state width="1167" height="215" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582711308967" />
+    <state width="1167" height="215" key="GridCell.Tab.0.right" timestamp="1582711308970">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="258" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582650607386" />
-    <state width="1167" height="292" key="GridCell.Tab.1.bottom" timestamp="1582650552421">
+    <state width="1167" height="215" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582711308970" />
+    <state width="1167" height="292" key="GridCell.Tab.1.bottom" timestamp="1582708114026">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="292" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582650552421" />
-    <state width="1167" height="292" key="GridCell.Tab.1.center" timestamp="1582650552417">
+    <state width="1167" height="292" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582708114026" />
+    <state width="1167" height="292" key="GridCell.Tab.1.center" timestamp="1582708114021">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="292" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582650552417" />
-    <state width="1167" height="292" key="GridCell.Tab.1.left" timestamp="1582650552416">
+    <state width="1167" height="292" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582708114021" />
+    <state width="1167" height="292" key="GridCell.Tab.1.left" timestamp="1582708114019">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="292" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582650552416" />
-    <state width="1167" height="292" key="GridCell.Tab.1.right" timestamp="1582650552418">
+    <state width="1167" height="292" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582708114019" />
+    <state width="1167" height="292" key="GridCell.Tab.1.right" timestamp="1582708114024">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="292" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582650552418" />
+    <state width="1167" height="292" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582708114024" />
     <state x="181" y="27" key="SettingsEditor" timestamp="1582628095802">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
@@ -193,17 +205,6 @@
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="337" y="58" width="672" height="676" key="search.everywhere.popup/67.27.1213.773@67.27.1213.773" timestamp="1582628065725" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/ReadJSONClass.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/criticDisplay$testReader.ic" NAME="testReader Coverage Results" MODIFIED="1582623521726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

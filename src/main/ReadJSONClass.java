@@ -2,13 +2,14 @@ import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
+import java.text.ParseException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ReadJSONClass {
 
-    public static String ReadJSON(String fileURL) throws IOException {
+    public static String ReadJSON(String fileURL) throws IOException, ParseException {
 
         File JSONToBeRead = new File(fileURL);
         if (!JSONToBeRead.exists()) {
@@ -19,11 +20,15 @@ public class ReadJSONClass {
             throw new FileNotFoundException();
         }
 
-        String myHTML = "<p>";
 
         FileReader JSONToBeReadInputStream = new FileReader(JSONToBeRead);
         Scanner JSONScanner = new Scanner(JSONToBeReadInputStream);
 
+        if (!JSONScanner.hasNextLine()){
+            throw new ParseException("Empty file", 0);
+        }
+
+        String myHTML = "<p>";
         while(JSONScanner.hasNextLine()) {
             String line = JSONScanner.nextLine();
                 try {
@@ -34,14 +39,18 @@ public class ReadJSONClass {
             }
         JSONToBeReadInputStream.close();
 
-        if (myHTML.length()>3){
-            myHTML = myHTML.substring(0, myHTML.length()-1);
-        }
 
- /*     File myHTMLFile = new File("../critic/test/samples/criticHTML.html");
-        myHTMLFile.createNewFile();
+
+        String htmlContent = myHTML + "</p>";
+
+
+        File myHTMLFile = new File("./test/criticHTML.html");
+
+        //myHTMLFile.createNewFile();
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
-        fileWriter.write((myHTML + "</p>").getBytes());*/
-        return myHTML + "</p>";
+        fileWriter.write(htmlContent.getBytes());
+        fileWriter.close();
+
+        return htmlContent;
     }
 }
