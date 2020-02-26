@@ -51,7 +51,7 @@ public class ReadJSONClass {
             throw new EmptyDirectoryAnalysisException("The analyzed directory was empty.");
         }
 
-        String htmlContent = myHTML + "</p>";
+        String htmlContent = myHTML + "</p>\n";
 
         File myHTMLFile = new File("./test/criticHTML.html");
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);

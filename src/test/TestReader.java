@@ -67,25 +67,27 @@ public class TestReader {
                 "\t\t}\n" +
                 "\t]\n" +
                 "}\n" +
-                "</p>";
+                "</p>\n";
         Assertions.assertDoesNotThrow(() -> {
             String contentToPrint = ReadJSONClass.ReadJSON(JSONFileURL);
             assertEquals(htmlContent, contentToPrint);
         });
     }
-    @Disabled
+
     @Test
     void WriteHTMLFileCase() {
         //String JSONFileURL = "../critic/test/samples/JSONFile.json";
         String JSONFileURL = "./test/RepositoryWithOneFile/critic.json";
         String generatedHTMLFileURL = "./test/criticHTML.html";
-        String expectedHTMLFileURL = "./test/expectedEmptyHTMLFile.html";
+        String expectedHTMLFileURL = "./test/expectedHTMLFile.html";
 
         RemoveFile(generatedHTMLFileURL);
 
-        Assertions.assertDoesNotThrow(() -> {
-            ReadJSONClass.ReadJSON(JSONFileURL);
-        });
+        Assertions.assertDoesNotThrow(() -> ReadJSONClass.ReadJSON(JSONFileURL));
+
+        File generatedHTMLFile = new File(generatedHTMLFileURL);
+        assertTrue(generatedHTMLFile.exists());
+        File expectedHTMLFile = new File(expectedHTMLFileURL);
         assertTrue(FilesContentsAreEquals(expectedHTMLFileURL, generatedHTMLFileURL));
     }
 
