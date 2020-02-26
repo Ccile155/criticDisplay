@@ -34,9 +34,17 @@ public class TestReader {
 
     @Test
     void EmptyFileCase() {
-        String emptyJSONFileURL = "./test/emptyFile.json";
+        String emptyFileURL = "./test/emptyFile.json";
         Assertions.assertThrows(ParseException.class, () -> {
-            ReadJSONClass.ReadJSON(emptyJSONFileURL);
+            ReadJSONClass.ReadJSON(emptyFileURL);
+        });
+    }
+
+    @Test
+    void EmptyDirectoryAnalysisCase() {
+        String EmptyDirectoryAnalysisURL = "./test/EmptyRepository/critic.json";
+        Assertions.assertThrows(ReadJSONClass.EmptyDirectoryAnalysisException.class, () -> {
+            ReadJSONClass.ReadJSON(EmptyDirectoryAnalysisURL);
         });
     }
 

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class ReadJSONClass {
 
-    public static String ReadJSON(String fileURL) throws IOException, ParseException {
+    public static String ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException {
 
         File JSONToBeRead = new File(fileURL);
         if (!JSONToBeRead.exists()) {
@@ -39,18 +39,31 @@ public class ReadJSONClass {
             }
         JSONToBeReadInputStream.close();
 
+        String emptyRepositoryAnalysisHtmlContent = "<p>{\n" +
+                "\t\"path\" : \"test/samples/EmptyRepository\",\n" +
+                "\t\"type\" : \"directory\",\n" +
+                "\t\"score\" : \"0\",\n" +
+                "\t\"content\" : [\n" +
+                "\t]\n" +
+                "}\n";
 
+        if (myHTML.equals(emptyRepositoryAnalysisHtmlContent)) {
+            throw new EmptyDirectoryAnalysisException("The analyzed directory was empty.");
+        }
 
         String htmlContent = myHTML + "</p>";
 
-
         File myHTMLFile = new File("./test/criticHTML.html");
-
-        //myHTMLFile.createNewFile();
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
         fileWriter.write(htmlContent.getBytes());
         fileWriter.close();
 
         return htmlContent;
+    }
+
+    public static class EmptyDirectoryAnalysisException extends Exception {
+        public EmptyDirectoryAnalysisException(String errorMessage) {
+            super(errorMessage);
+        }
     }
 }
