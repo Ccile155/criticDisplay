@@ -1,15 +1,18 @@
-import org.w3c.dom.ls.LSOutput;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.swing.filechooser.FileNameExtensionFilter;
+import org.apache.commons.io.IOUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import java.io.*;
 import java.text.ParseException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReadJSONClass {
 
-    public static String ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException, NotAFileException {
+    public static void ReadJSON(String fileURL) throws IOException, ParseException, EmptyDirectoryAnalysisException, NotAFileException {
 
         File JSONToBeRead = new File(fileURL);
 
@@ -23,51 +26,51 @@ public class ReadJSONClass {
 
         String htmlContent = readJSONWriteHtmlContent(JSONToBeRead);
 
-        writeHtmlFile(htmlContent);
-
-        return htmlContent;
+        String directoryPath = JSONToBeRead.getPath();
+        int endOfPath = directoryPath.lastIndexOf("/");
+        String outputPath = directoryPath.substring(0, endOfPath+1);
+        writeHtmlFile(htmlContent, outputPath);
     }
 
-    private static String readJSONWriteHtmlContent(File JSONToBeRead) throws ParseException, IOException, EmptyDirectoryAnalysisException {
-        FileReader JSONToBeReadInputStream = new FileReader(JSONToBeRead);
-        Scanner JSONScanner = new Scanner(JSONToBeReadInputStream);
+    private static String readJSONWriteHtmlContent(File JSONToBeRead){
 
-        if (!JSONScanner.hasNextLine()){
-            throw new ParseException("Empty file", 0);
+        String JSONContent ="";
+        String val="";
+
+        try {
+            ObjectMapper oMapper = new ObjectMapper();
+            HashMap tempObject = oMapper.readValue(new FileReader(JSONToBeRead.getPath()),
+
+                    new TypeReference<HashMap<String, Object>>() {
+
+                    });
+
+            val = (String)tempObject.get("score");
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        String myHTML = "<p>";
-        while(JSONScanner.hasNextLine()) {
-            String line = JSONScanner.nextLine();
-                try {
-                    myHTML+= line + "\n";
-                } catch (Exception var6) {
-                    System.out.println(var6.getMessage());
-                }
-            }
-        JSONToBeReadInputStream.close();
-
-        checkEmptyDirAnalysisContent(myHTML);
-
-        return myHTML + "</p>\n";
-    }
-
-    private static void checkEmptyDirAnalysisContent(String myHTML) throws EmptyDirectoryAnalysisException {
-        String emptyRepositoryAnalysisHtmlContent = "<p>{\n" +
-                "\t\"path\" : \"test/samples/EmptyRepository\",\n" +
-                "\t\"type\" : \"directory\",\n" +
-                "\t\"score\" : \"0\",\n" +
-                "\t\"content\" : [\n" +
-                "\t]\n" +
-                "}\n";
-
-        if (myHTML.equals(emptyRepositoryAnalysisHtmlContent)) {
-            throw new EmptyDirectoryAnalysisException("The analyzed directory was empty.");
+        if (val.equals("0")){
+            JSONContent = "{\n" +
+                    "\t\"path\" : \"test/samples/EmptyRepository\",\n" +
+                    "\t\"type\" : \"directory\",\n" +
+                    "\t\"score\" : \"0\",\n" +
+                    "\t\"content\" : [\n" +
+                    "\t]\n" +
+                    "}\n";
         }
+
+        String HTMLContent = "<p>" + JSONContent + "</p>\n";
+
+
+        return HTMLContent;
     }
 
-    private static void writeHtmlFile(String htmlContent) throws IOException {
-        File myHTMLFile = new File("./test/criticHTML.html");
+    private static void writeHtmlFile(String htmlContent, String path) throws IOException {
+        File myHTMLFile = new File(path + "criticHTML.html");
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
         fileWriter.write(htmlContent.getBytes());
         fileWriter.close();

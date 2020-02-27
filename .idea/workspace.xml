@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cd20e68-fd36-4723-b06d-38b701dce8b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ReadJSONClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ReadJSONClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass$EmptyDirectoryAnalysisException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass$EmptyDirectoryAnalysisException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass$NotAFileException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass$NotAFileException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadJSONClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/criticHTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/criticHTML.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +44,32 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Ccile\CriticDisplay\src\main" />
-      <recent name="D:\Ccile\CriticDisplay\src" />
-      <recent name="D:\Ccile\CriticDisplay" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Ccile\CriticDisplay" />
       <recent name="D:\Ccile\CriticDisplay\src\test" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ccile\CriticDisplay\src\main" />
+      <recent name="D:\Ccile\CriticDisplay\src" />
+      <recent name="D:\Ccile\CriticDisplay" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+    </option>
   </component>
   <component name="RunManager" selected="JUnit.testReader">
     <configuration name="TestReader.EmptyDirectoryAnalysisCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -115,8 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestReader.WriteHTMLFileCase" />
         <item itemvalue="JUnit.TestReader.EmptyDirectoryAnalysisCase" />
+        <item itemvalue="JUnit.TestReader.WriteHTMLFileCase" />
         <item itemvalue="JUnit.TestReader.StringFromJSONFileCase" />
         <item itemvalue="JUnit.TestReader.StringFromEmptyJSONFileCase" />
       </list>
@@ -158,56 +173,64 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="388" y="182" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.760@0.0.1280.760" timestamp="1582284548477" />
+    <state x="481" y="99" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1582815727796">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="481" y="99" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1213.773@67.27.1213.773" timestamp="1582815727796" />
     <state x="438" y="188" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582623900734">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="438" y="188" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1213.773@67.27.1213.773" timestamp="1582623900734" />
-    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582707373848">
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582734501103">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="420" y="134" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582283272655" />
-    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582707373848" />
-    <state width="1167" height="103" key="GridCell.Tab.0.bottom" timestamp="1582732157369">
+    <state x="465" y="163" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.773@67.27.1213.773" timestamp="1582734501103" />
+    <state width="1167" height="230" key="GridCell.Tab.0.bottom" timestamp="1582820903030">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="103" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582732157369" />
-    <state width="1167" height="103" key="GridCell.Tab.0.center" timestamp="1582732157362">
+    <state width="1167" height="230" key="GridCell.Tab.0.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582820903030" />
+    <state width="1167" height="230" key="GridCell.Tab.0.center" timestamp="1582820903025">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="103" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582732157362" />
-    <state width="1167" height="103" key="GridCell.Tab.0.left" timestamp="1582732157361">
+    <state width="1167" height="230" key="GridCell.Tab.0.center/67.27.1213.773@67.27.1213.773" timestamp="1582820903025" />
+    <state width="1167" height="230" key="GridCell.Tab.0.left" timestamp="1582820903024">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="103" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582732157361" />
-    <state width="1167" height="103" key="GridCell.Tab.0.right" timestamp="1582732157368">
+    <state width="1167" height="230" key="GridCell.Tab.0.left/67.27.1213.773@67.27.1213.773" timestamp="1582820903024" />
+    <state width="1167" height="230" key="GridCell.Tab.0.right" timestamp="1582820903029">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="103" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582732157368" />
-    <state width="1167" height="169" key="GridCell.Tab.1.bottom" timestamp="1582724564039">
+    <state width="1167" height="230" key="GridCell.Tab.0.right/67.27.1213.773@67.27.1213.773" timestamp="1582820903029" />
+    <state width="1167" height="213" key="GridCell.Tab.1.bottom" timestamp="1582820682489">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="169" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582724564039" />
-    <state width="1167" height="169" key="GridCell.Tab.1.center" timestamp="1582724564038">
+    <state width="1167" height="213" key="GridCell.Tab.1.bottom/67.27.1213.773@67.27.1213.773" timestamp="1582820682489" />
+    <state width="1167" height="213" key="GridCell.Tab.1.center" timestamp="1582820682487">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="169" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582724564038" />
-    <state width="1167" height="169" key="GridCell.Tab.1.left" timestamp="1582724564037">
+    <state width="1167" height="213" key="GridCell.Tab.1.center/67.27.1213.773@67.27.1213.773" timestamp="1582820682487" />
+    <state width="1167" height="213" key="GridCell.Tab.1.left" timestamp="1582820682486">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="169" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582724564037" />
-    <state width="1167" height="169" key="GridCell.Tab.1.right" timestamp="1582724564038">
+    <state width="1167" height="213" key="GridCell.Tab.1.left/67.27.1213.773@67.27.1213.773" timestamp="1582820682486" />
+    <state width="1167" height="213" key="GridCell.Tab.1.right" timestamp="1582820682488">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state width="1167" height="169" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582724564038" />
-    <state x="181" y="27" key="SettingsEditor" timestamp="1582628095802">
+    <state width="1167" height="213" key="GridCell.Tab.1.right/67.27.1213.773@67.27.1213.773" timestamp="1582820682488" />
+    <state x="206" y="70" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1582817119594">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="206" y="70" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1213.773@67.27.1213.773" timestamp="1582817119594" />
+    <state x="181" y="27" key="SettingsEditor" timestamp="1582814604639">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="120" y="0" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582293363804" />
-    <state x="181" y="27" key="SettingsEditor/67.27.1213.773@67.27.1213.773" timestamp="1582628095802" />
-    <state x="329" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582625842455">
+    <state x="181" y="27" key="SettingsEditor/67.27.1213.773@67.27.1213.773" timestamp="1582814604639" />
+    <state x="329" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582812246506">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
-    <state x="329" y="240" key="com.intellij.ide.util.TipDialog/67.27.1213.773@67.27.1213.773" timestamp="1582625842455" />
+    <state x="329" y="240" key="com.intellij.ide.util.TipDialog/67.27.1213.773@67.27.1213.773" timestamp="1582812246506" />
     <state x="344" y="272" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582293469648">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -220,10 +243,25 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="22" y="0" key="new project wizard/0.0.1280.760@0.0.1280.760" timestamp="1582284021179" />
+    <state x="337" y="183" width="672" height="677" key="run.anything.popup" timestamp="1582814839642">
+      <screen x="67" y="27" width="1213" height="773" />
+    </state>
+    <state x="337" y="183" width="672" height="677" key="run.anything.popup/67.27.1213.773@67.27.1213.773" timestamp="1582814839642" />
     <state x="337" y="58" width="672" height="676" key="search.everywhere.popup" timestamp="1582628065725">
       <screen x="67" y="27" width="1213" height="773" />
     </state>
     <state x="337" y="58" width="672" height="676" key="search.everywhere.popup/67.27.1213.773@67.27.1213.773" timestamp="1582628065725" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/ReadJSONClass.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/criticDisplay$testReader.ic" NAME="testReader Coverage Results" MODIFIED="1582623521726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
