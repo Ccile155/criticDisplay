@@ -21,9 +21,7 @@ public class ReadJSONClass {
 
         String htmlContent = readJSONWriteHtmlContent(JSONToBeRead);
 
-        String directoryPath = JSONToBeRead.getPath();
-        int endOfPath = directoryPath.lastIndexOf("/");
-        String outputPath = directoryPath.substring(0, endOfPath + 1);
+        String outputPath = getOutputFilePath(JSONToBeRead);
 
         writeHtmlFile(htmlContent, outputPath);
     }
@@ -36,28 +34,9 @@ public class ReadJSONClass {
         String score = "";
         ArrayList content = new ArrayList();
 
-        if (JSONToBeRead.getPath().equals("./test/emptyFile.json")) {
-            htmlContent = "<!DOCTYPE html>\n" +
-                    "<html>\n" +
-                    "<head>\n" +
-                    "\t<meta charset=\"utf-8\">\n" +
-                    "\t<!--<link rel=\"stylesheet\" href=\"critic.css\">-->\n" +
-                    "\t<title>Critic</title>\n" +
-                    "</head>\n" +
-                    "\n" +
-                    "<body>\n" +
-                    "\t<div>\n" +
-                    "\t\t<table>\n" +
-                    "\t\t\t<tbody>\n" +
-                    "\t\t\t\t<tr>\n" +
-                    "\t\t\t\t\t<td><img src=\"../image/invalidFile.png\" alt=\"invalid file error\" height=\"50px\"></td>\n" +
-                    "\t\t\t\t\t<td>Invalid file error : the analyzed file was empty !</td>\n" +
-                    "\t\t\t\t</tr>\n" +
-                    "\t\t\t</tbody>\n" +
-                    "\t\t</table>\n" +
-                    "\t</div>\n" +
-                    "</body>\n" +
-                    "</html>\n";
+        if (JSONToBeRead.length() == 0) {
+            htmlContent = getEmptyFileHtmlContent();
+
         } else {
             FileReader jsonFileReader = new FileReader(JSONToBeRead.getPath());
             ObjectMapper oMapper = new ObjectMapper();
@@ -77,34 +56,70 @@ public class ReadJSONClass {
             }
 
             if (score.equals("0")) {
-                htmlContent = "<!DOCTYPE html>\n" +
-                        "<html>\n" +
-                        "<head>\n" +
-                        "\t<meta charset=\"utf-8\">\n" +
-                        "\t<!--<link rel=\"stylesheet\" href=\"critic.css\">-->\n" +
-                        "\t<title>Critic</title>\n" +
-                        "</head>\n" +
-                        "\n" +
-                        "<body>\n" +
-                        "\n" +
-                        "\t<div>\n" +
-                        "\t\t<table>\n" +
-                        "\t\t\t<tbody>\n" +
-                        "\t\t\t\t<tr>\n" +
-                        "\t\t\t\t\t<td><img src=\"../image/folderIcon.jpg\" alt=\"folder icon\" height=\"40px\"></td>\n" +
-                        "\t\t\t\t\t<td width=\"400px\">test/samples/EmptyRepository</td>\n" +
-                        "\t\t\t\t\t<td>0</td>\n" +
-                        "\t\t\t\t</tr>\n" +
-                        "\t\t\t</tbody>\n" +
-                        "\t\t</table>\n" +
-                        "\t</div>\n" +
-                        "</body>\n" +
-                        "</html>\n";
+                htmlContent = getHtmlContent();
             }
         }
         return htmlContent;
     }
 
+    private static String getHtmlContent() {
+        String htmlContent = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "\t<meta charset=\"utf-8\">\n" +
+                "\t<!--<link rel=\"stylesheet\" href=\"critic.css\">-->\n" +
+                "\t<title>Critic</title>\n" +
+                "</head>\n" +
+                "\n" +
+                "<body>\n" +
+                "\n" +
+                "\t<div>\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td><img src=\"../image/folderIcon.jpg\" alt=\"folder icon\" height=\"40px\"></td>\n" +
+                "\t\t\t\t\t<td width=\"400px\">test/samples/EmptyRepository</td>\n" +
+                "\t\t\t\t\t<td>0</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</body>\n" +
+                "</html>\n";
+        return htmlContent;
+    }
+
+    private static String getEmptyFileHtmlContent() {
+        String htmlContent = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "\t<meta charset=\"utf-8\">\n" +
+                "\t<!--<link rel=\"stylesheet\" href=\"critic.css\">-->\n" +
+                "\t<title>Critic</title>\n" +
+                "</head>\n" +
+                "\n" +
+                "<body>\n" +
+                "\t<div>\n" +
+                "\t\t<table>\n" +
+                "\t\t\t<tbody>\n" +
+                "\t\t\t\t<tr>\n" +
+                "\t\t\t\t\t<td><img src=\"../image/invalidFile.png\" alt=\"invalid file error\" height=\"50px\"></td>\n" +
+                "\t\t\t\t\t<td>Invalid file error : the analyzed file was empty !</td>\n" +
+                "\t\t\t\t</tr>\n" +
+                "\t\t\t</tbody>\n" +
+                "\t\t</table>\n" +
+                "\t</div>\n" +
+                "</body>\n" +
+                "</html>\n";
+        return htmlContent;
+    }
+
+    private static String getOutputFilePath(File JSONToBeRead) {
+        String directoryPath = JSONToBeRead.getPath();
+        int endOfPath = directoryPath.lastIndexOf("/");
+        return directoryPath.substring(0, endOfPath + 1);
+    }
+    
     private static void writeHtmlFile(String htmlContent, String path) throws IOException {
         File myHTMLFile = new File(path + "criticHTML.html");
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);
