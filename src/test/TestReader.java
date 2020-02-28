@@ -1,3 +1,4 @@
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ public class TestReader {
 
     @Test
     void NonExistentFileCase() {
-        String NonExistentPath= "NonExistentPath";
+        String NonExistentPath = "NonExistentPath";
         Assertions.assertThrows(FileNotFoundException.class, () -> {
             ReadJSONClass.ReadJSON(NonExistentPath);
         });
@@ -28,11 +29,10 @@ public class TestReader {
         });
     }
 
-    @Disabled
     @Test
     void EmptyJSONFileCase() {
-        String emptyJSONFilePath = "./test/critic.json";
-        String generatedHTMLFilePath = "./test/criticEmptyFile.html";
+        String emptyJSONFilePath = "./test/emptyFile.json";
+        String generatedHTMLFilePath = "./test/criticHTML.html";
         String expectedHTMLFilePath = "./test/expectedEmptyFile.html";
 
         RemoveFile(generatedHTMLFilePath);
@@ -86,8 +86,7 @@ public class TestReader {
             byte[] content1 = Files.readAllBytes(f1.toPath());
             byte[] content2 = Files.readAllBytes(f2.toPath());
             return Arrays.equals(content1, content2);
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             return false;
         }
     }

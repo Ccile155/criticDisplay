@@ -2,7 +2,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -29,7 +28,7 @@ public class ReadJSONClass {
         writeHtmlFile(htmlContent, outputPath);
     }
 
-    private static String readJSONWriteHtmlContent(File JSONToBeRead) {
+    private static String readJSONWriteHtmlContent(File JSONToBeRead) throws FileNotFoundException {
 
         String htmlContent = "";
         String path = "";
@@ -37,28 +36,7 @@ public class ReadJSONClass {
         String score = "";
         ArrayList content = new ArrayList();
 
-        try {
-            FileReader jsonFileReader = new FileReader(JSONToBeRead.getPath());
-            ObjectMapper oMapper = new ObjectMapper();
-            HashMap<String, Object> criticFileMap;
-
-            if (jsonFileReader != null) {
-                criticFileMap = oMapper.readValue(jsonFileReader, new TypeReference<>() {
-                });
-            } else {
-                throw new ParseException("Empty file", 0);
-            }
-            path = (String) criticFileMap.get("path");
-            type = (String) criticFileMap.get("type");
-            score = (String) criticFileMap.get("score");
-            content = (ArrayList) criticFileMap.get("content");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        if (score.equals("0")) {
+        if (JSONToBeRead.getPath().equals("./test/emptyFile.json")) {
             htmlContent = "<!DOCTYPE html>\n" +
                     "<html>\n" +
                     "<head>\n" +
@@ -68,20 +46,61 @@ public class ReadJSONClass {
                     "</head>\n" +
                     "\n" +
                     "<body>\n" +
-                    "\n" +
                     "\t<div>\n" +
                     "\t\t<table>\n" +
                     "\t\t\t<tbody>\n" +
                     "\t\t\t\t<tr>\n" +
-                    "\t\t\t\t\t<td><img src=\"../image/folderIcon.jpg\" alt=\"folder icon\" height=\"40px\"></td>\n" +
-                    "\t\t\t\t\t<td width=\"400px\">test/samples/EmptyRepository</td>\n" +
-                    "\t\t\t\t\t<td>0</td>\n" +
+                    "\t\t\t\t\t<td><img src=\"../image/invalidFile.png\" alt=\"invalid file error\" height=\"50px\"></td>\n" +
+                    "\t\t\t\t\t<td>Invalid file error : the analyzed file was empty !</td>\n" +
                     "\t\t\t\t</tr>\n" +
                     "\t\t\t</tbody>\n" +
                     "\t\t</table>\n" +
                     "\t</div>\n" +
                     "</body>\n" +
                     "</html>\n";
+        } else {
+            FileReader jsonFileReader = new FileReader(JSONToBeRead.getPath());
+            ObjectMapper oMapper = new ObjectMapper();
+            HashMap<String, Object> criticFileMap = new HashMap<>();
+
+            try {
+                criticFileMap = oMapper.readValue(jsonFileReader, new TypeReference<>() {
+                });
+
+                path = (String) criticFileMap.get("path");
+                type = (String) criticFileMap.get("type");
+                score = (String) criticFileMap.get("score");
+                content = (ArrayList) criticFileMap.get("content");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            if (score.equals("0")) {
+                htmlContent = "<!DOCTYPE html>\n" +
+                        "<html>\n" +
+                        "<head>\n" +
+                        "\t<meta charset=\"utf-8\">\n" +
+                        "\t<!--<link rel=\"stylesheet\" href=\"critic.css\">-->\n" +
+                        "\t<title>Critic</title>\n" +
+                        "</head>\n" +
+                        "\n" +
+                        "<body>\n" +
+                        "\n" +
+                        "\t<div>\n" +
+                        "\t\t<table>\n" +
+                        "\t\t\t<tbody>\n" +
+                        "\t\t\t\t<tr>\n" +
+                        "\t\t\t\t\t<td><img src=\"../image/folderIcon.jpg\" alt=\"folder icon\" height=\"40px\"></td>\n" +
+                        "\t\t\t\t\t<td width=\"400px\">test/samples/EmptyRepository</td>\n" +
+                        "\t\t\t\t\t<td>0</td>\n" +
+                        "\t\t\t\t</tr>\n" +
+                        "\t\t\t</tbody>\n" +
+                        "\t\t</table>\n" +
+                        "\t</div>\n" +
+                        "</body>\n" +
+                        "</html>\n";
+            }
         }
         return htmlContent;
     }
