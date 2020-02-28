@@ -80,8 +80,6 @@ public class ReadJSONClass {
                     "\t\t\t</tbody>\n" +
                     "\t\t</table>\n" +
                     "\t</div>\n" +
-                    "\n" +
-                    "\n" +
                     "</body>\n" +
                     "</html>\n";
         }
@@ -95,16 +93,9 @@ public class ReadJSONClass {
         fileWriter.close();
     }
 
-    public static class EmptyDirectoryAnalysisException extends Exception {
-        public EmptyDirectoryAnalysisException(String errorMessage) {
-            super(errorMessage);
-        }
-    }
-
     public static class NotAFileException extends Exception {
         public NotAFileException(String errorMessage) {
             super(errorMessage);
         }
     }
-
 }

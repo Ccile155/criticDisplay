@@ -1,4 +1,3 @@
-import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -6,20 +5,18 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.nio.file.Files;
-import java.text.ParseException;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
 public class TestReader {
 
     @Test
-    void NonExistantFileCase() {
-        String NonExistantPath= "NonExistantPath";
+    void NonExistentFileCase() {
+        String NonExistentPath= "NonExistentPath";
         Assertions.assertThrows(FileNotFoundException.class, () -> {
-            ReadJSONClass.ReadJSON(NonExistantPath);
+            ReadJSONClass.ReadJSON(NonExistentPath);
         });
     }
 
@@ -34,10 +31,18 @@ public class TestReader {
     @Disabled
     @Test
     void EmptyJSONFileCase() {
-        String emptyJSONFilePath = "./test/emptyFile.json";
-        Assertions.assertThrows(ParseException.class, () -> {
-            ReadJSONClass.ReadJSON(emptyJSONFilePath);
-        });
+        String emptyJSONFilePath = "./test/critic.json";
+        String generatedHTMLFilePath = "./test/criticEmptyFile.html";
+        String expectedHTMLFilePath = "./test/expectedEmptyFile.html";
+
+        RemoveFile(generatedHTMLFilePath);
+
+        Assertions.assertDoesNotThrow(() -> ReadJSONClass.ReadJSON(emptyJSONFilePath));
+
+        File generatedHTMLFile = new File(generatedHTMLFilePath);
+        assertTrue(generatedHTMLFile.exists());
+        File expectedHTMLFile = new File(expectedHTMLFilePath);
+        assertTrue(FilesContentsAreEquals(expectedHTMLFilePath, generatedHTMLFilePath));
     }
 
     @Test
@@ -59,7 +64,7 @@ public class TestReader {
     @Disabled
     @Test
     void WriteHTMLFileCase() {
-        //String JSONFileURL = "../critic/test/samples/JSONFile.json";
+        //String JSONFilePath = "../critic/test/samples/JSONFile.json";
         String JSONFilePath = "./test/RepositoryWithOneFile/critic.json";
         String generatedHTMLFilePath = "./test/criticHTML.html";
         String expectedHTMLFilePath = "./test/expectedHTMLFile.html";
