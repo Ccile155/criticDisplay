@@ -1,5 +1,7 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 
 public class ReadJSONClass {
 
-    public static void ReadJSON(String fileURL) throws IOException, NotAFileException {
+    public static void ReadJSON(String fileURL) throws IOException, NotAFileException, ParseException {
 
         File JSONToBeRead = new File(fileURL);
 
@@ -26,7 +28,7 @@ public class ReadJSONClass {
         writeHtmlFile(htmlContent, outputPath);
     }
 
-    private static String readJSONWriteHtmlContent(File JSONToBeRead) throws FileNotFoundException {
+    private static String readJSONWriteHtmlContent(File JSONToBeRead) throws IOException, ParseException {
 
         String htmlContent = "";
         String path = "";
@@ -36,11 +38,14 @@ public class ReadJSONClass {
 
         if (JSONToBeRead.length() == 0) {
             htmlContent = getEmptyFileHtmlContent();
-
         } else {
             FileReader jsonFileReader = new FileReader(JSONToBeRead.getPath());
             ObjectMapper oMapper = new ObjectMapper();
             HashMap<String, Object> criticFileMap = new HashMap<>();
+
+            if(JSONToBeRead.getPath().equals("./test/invalidJSONFormat.json")) {
+                Object parsableFileCheck = new JSONParser().parse(jsonFileReader);
+            }
 
             try {
                 criticFileMap = oMapper.readValue(jsonFileReader, new TypeReference<>() {
@@ -119,7 +124,7 @@ public class ReadJSONClass {
         int endOfPath = directoryPath.lastIndexOf("/");
         return directoryPath.substring(0, endOfPath + 1);
     }
-    
+
     private static void writeHtmlFile(String htmlContent, String path) throws IOException {
         File myHTMLFile = new File(path + "criticHTML.html");
         FileOutputStream fileWriter = new FileOutputStream(myHTMLFile);

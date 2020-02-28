@@ -1,4 +1,4 @@
-import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -26,6 +26,14 @@ public class TestReader {
         String folderNotFilePath = "./test/RepositoryWithOneFile";
         Assertions.assertThrows(ReadJSONClass.NotAFileException.class, () -> {
             ReadJSONClass.ReadJSON(folderNotFilePath);
+        });
+    }
+
+    @Test
+    void InvalidJSONFormatCase() {
+        String invalidJSONFormatFilePath = "./test/invalidJSONFormat.json";
+        Assertions.assertThrows(ParseException.class, () -> {
+            ReadJSONClass.ReadJSON(invalidJSONFormatFilePath);
         });
     }
 
